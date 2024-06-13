@@ -290,12 +290,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "resource": {
@@ -347,12 +347,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "resource": {
@@ -407,12 +407,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "resource": {
@@ -469,12 +469,12 @@
         },
         "compile": {
           "lib/netcoreapp3.1/_._": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "resource": {
@@ -538,12 +538,12 @@
         },
         "compile": {
           "ref/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/net6.0/Microsoft.Data.SqlClient.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtimeTargets": {
@@ -1133,12 +1133,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         }
       },
@@ -1146,12 +1146,12 @@
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         }
       },
@@ -1338,12 +1338,12 @@
         },
         "compile": {
           "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/net5.0/Serilog.Sinks.File.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         }
       },
@@ -1383,12 +1383,12 @@
         },
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "frameworkReferences": [
@@ -1402,12 +1402,12 @@
         },
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         }
       },
@@ -1415,12 +1415,12 @@
         "type": "package",
         "compile": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "runtime": {
           "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "related": ".pdb;.xml"
+            "related": ".xml;.pdb"
           }
         },
         "frameworkReferences": [
@@ -5326,33 +5326,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\User N\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\TASK3_Api.csproj",
+      "projectUniqueName": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\TASK3_Api.csproj",
       "projectName": "TASK3_Api",
-      "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\TASK3_Api.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\obj\\",
+      "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\TASK3_Api.csproj",
+      "packagesPath": "C:\\Users\\User N\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User N\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj"
+            "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj": {
+              "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj"
             }
           }
         }
@@ -5361,6 +5363,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -5409,7 +5416,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
