@@ -21,6 +21,9 @@
 
 </head>
 
+@if (TempData["Error"] != null) {
+  <span style="display:none" id="error-message" data-message="@TempData["Error"]"></span>
+}
 <body id="page-top">
 
   <!-- Page Wrapper -->
@@ -40,17 +43,19 @@
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
-      <!-- Nav Item - Home -->
+      <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" asp-action="index" asp-controller="home">
+        <a class="nav-link" asp-controller="home" asp-action="index">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Home</span>
+          <span>Dashboard</span>
         </a>
       </li>
 
-      <!-- Nav Item - Home -->
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
       <li class="nav-item active">
-        <a class="nav-link" asp-action="index" asp-controller="group">
+        <a class="nav-link" asp-controller="group" asp-action="index">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Groups</span>
         </a>
@@ -58,6 +63,37 @@
 
       <!-- Divider -->
       <hr class="sidebar-divider">
+
+      <li class="nav-item active">
+        <a class="nav-link" asp-controller="student" asp-action="index">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Students</span>
+        </a>
+      </li>
+      @if (User.Identity.IsAuthenticated) {
+        <li class="nav-item active">
+          <a class="nav-link" asp-controller="account" asp-action="logout">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Logout</span>
+          </a>
+        </li>
+      }
+      else {
+        <li class="nav-item active">
+          <a class="nav-link" asp-controller="account" asp-action="login">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Login</span>
+          </a>
+        </li>
+      }
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
 
     </ul>
     <!-- End of Sidebar -->
@@ -99,13 +135,17 @@
 
   <!-- Custom scripts for all pages-->
   <script src="~/js/sb-admin-2.min.js"></script>
+  <script>
+    let errorSpan = document.getElementById("error-message");
 
-  <!-- Page level plugins -->
-  <script src="~/vendor/chart.js/Chart.min.js"></script>
+    if (errorSpan) {
+      alert(errorSpan.getAttribute("data-message"))
+    }
 
-  <!-- Page level custom scripts -->
-  <script src="~/js/demo/chart-area-demo.js"></script>
-  <script src="~/js/demo/chart-pie-demo.js"></script>
+  </script>
+
+  @RenderSection("scripts", required: false)
+  <script src="~/js/main.js"></script>
 
 </body>
 

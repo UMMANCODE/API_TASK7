@@ -10,8 +10,6 @@ namespace TASK3_Business.Validators.GroupValidators {
       RuleFor(x => x.Limit)
         .NotEmpty()
         .InclusiveBetween(5, 18);
-      RuleFor(x => x.Id)
-        .NotEmpty();
     }
   }
 }

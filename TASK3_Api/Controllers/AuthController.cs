@@ -20,7 +20,8 @@ namespace TASK3_Api.Controllers {
       _userManager = userManager;
     }
 
-    [HttpGet("users")]
+    [HttpGet("create-users")]
+    [Authorize(Roles = "Developer")]
     public async Task<IActionResult> CreateUser() {
 
       await _roleManager.CreateAsync(new IdentityRole("Admin"));
@@ -44,12 +45,12 @@ namespace TASK3_Api.Controllers {
       await _userManager.AddToRoleAsync(user1, "Admin");
       await _userManager.AddToRoleAsync(user2, "Member");
 
-      return Ok(user1.Id);
+      return Ok("Users created Created");
     }
 
     [HttpPost("login")]
-    public ActionResult Login(LoginDto loginDto) {
-      var token = _authService.Login(loginDto);
+    public async Task<IActionResult> Login(LoginDto loginDto) {
+      var token = await _authService.Login(loginDto);
       return Ok(new { token });
     }
   }

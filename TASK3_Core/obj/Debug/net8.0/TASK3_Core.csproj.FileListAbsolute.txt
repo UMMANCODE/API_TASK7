@@ -67,3 +67,4 @@ C:\Users\User N\Desktop\API_TASK7\TASK3_Core\obj\Debug\net8.0\TASK3_Core.dll
 C:\Users\User N\Desktop\API_TASK7\TASK3_Core\obj\Debug\net8.0\refint\TASK3_Core.dll
 C:\Users\User N\Desktop\API_TASK7\TASK3_Core\obj\Debug\net8.0\TASK3_Core.pdb
 C:\Users\User N\Desktop\API_TASK7\TASK3_Core\obj\Debug\net8.0\ref\TASK3_Core.dll
+C:\Users\user\Desktop\Code Academy\API\TASK7\TASK3_Core\obj\Debug\net8.0\TASK3_Core.sourcelink.json

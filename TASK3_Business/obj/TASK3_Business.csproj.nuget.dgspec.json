@@ -1,27 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj": {}
+    "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj": {
+    "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj",
         "projectName": "TASK3_Business",
-        "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\TASK3_Business.csproj",
-        "packagesPath": "C:\\Users\\User N\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\TASK3_Business.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -29,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj": {
-                "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj"
+              "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj"
               }
             }
           }
@@ -39,11 +42,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -87,28 +85,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\TASK3_Core.csproj": {
+    "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\TASK3_Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\TASK3_Core.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\TASK3_Core.csproj",
         "projectName": "TASK3_Core",
-        "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\TASK3_Core.csproj",
-        "packagesPath": "C:\\Users\\User N\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\TASK3_Core.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -122,11 +123,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -154,28 +150,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj": {
+    "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj",
         "projectName": "TASK3_DataAccess",
-        "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj",
-        "packagesPath": "C:\\Users\\User N\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\TASK3_DataAccess.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\User N\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -183,8 +182,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\TASK3_Core.csproj": {
-                "projectPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\TASK3_Core.csproj"
+              "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\TASK3_Core.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Core\\TASK3_Core.csproj"
               }
             }
           }
@@ -193,11 +192,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -231,7 +225,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

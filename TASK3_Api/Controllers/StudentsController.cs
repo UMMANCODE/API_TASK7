@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TASK3_Business.Dtos.StudentDtos;
+using TASK3_Business.Services.Implementations;
 using TASK3_Business.Services.Interfaces;
 using TASK3_Core.Entities;
 using TASK3_DataAccess;
@@ -9,16 +10,22 @@ namespace TASK3_Api.Controllers {
   [Authorize(Roles = "Admin")]
   [Route("api/[controller]")]
   [ApiController]
-  public class StudentController : ControllerBase {
+  public class StudentsController : ControllerBase {
     private readonly IStudentService _studentService;
 
-    public StudentController(IStudentService studentService) {
+    public StudentsController(IStudentService studentService) {
       _studentService = studentService;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 1) {
       var data = await _studentService.GetAll(pageNumber, pageSize);
+      return StatusCode(200, data);
+    }
+
+    [HttpGet("whole")]
+    public async Task<IActionResult> GetWhole() {
+      var data = await _studentService.GetWhole();
       return StatusCode(200, data);
     }
 

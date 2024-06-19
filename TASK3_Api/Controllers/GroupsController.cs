@@ -21,7 +21,12 @@ namespace TASK3_Api.Controllers {
     [HttpGet("")]
     public async Task<IActionResult> GetAll(int pageNumber = 1, int pageSize = 1) {
       var data = await _groupService.GetAll(pageNumber, pageSize);
+      return StatusCode(200, data);
+    }
 
+    [HttpGet("whole")]
+    public async Task<IActionResult> GetWhole() {
+      var data = await _groupService.GetWhole();
       return StatusCode(200, data);
     }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UH6AMLVtRC4cl7xlGN/JWZWsbqF6LldqV/PDgWKuuvI=",
+  "Hash": "NDvoSN/1KKP+V9ovmJQFxz2+vPTyZTtlfXYK1YMHDMk=",
   "Source": "TASK3_Api",
   "BasePath": "_content/TASK3_Api",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TASK3_Api\\wwwroot",
       "Source": "TASK3_Api",
-      "ContentRoot": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\wwwroot\\",
       "BasePath": "_content/TASK3_Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\wwwroot\\images\\students\\45161ece-5f00-4ad3-beea-673201bd74f9bmc_qr.png",
+      "Identity": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\wwwroot\\images\\students\\45161ece-5f00-4ad3-beea-673201bd74f9bmc_qr.png",
       "SourceId": "TASK3_Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\wwwroot\\",
       "BasePath": "_content/TASK3_Api",
       "RelativePath": "images/students/45161ece-5f00-4ad3-beea-673201bd74f9bmc_qr.png",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\students\\45161ece-5f00-4ad3-beea-673201bd74f9bmc_qr.png"
     },
     {
-      "Identity": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\wwwroot\\images\\students\\d2660e8e-edaa-4b84-b091-8fa1a4b7c5971_44KZRAupREHKCL1zIjjDig.png",
+      "Identity": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\wwwroot\\images\\students\\d2660e8e-edaa-4b84-b091-8fa1a4b7c5971_44KZRAupREHKCL1zIjjDig.png",
       "SourceId": "TASK3_Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\Code Academy\\API\\TASK7\\TASK3_Api\\wwwroot\\",
       "BasePath": "_content/TASK3_Api",
       "RelativePath": "images/students/d2660e8e-edaa-4b84-b091-8fa1a4b7c5971_44KZRAupREHKCL1zIjjDig.png",
       "AssetKind": "All",

@@ -1,0 +1,70 @@
+﻿@model StudentCreateRequest
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container-fluid">
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Student Edit</h1>
+    </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <form class="user" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="FirstName">FirstName</label>
+          <input asp-for="FirstName" class="form-control" id="FirstName" placeholder=" ">
+          <span class="text-danger" asp-validation-for="FirstName"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="LastName">LastName</label>
+          <input asp-for="LastName" class="form-control" id="LastName" placeholder=" ">
+          <span class="text-danger" asp-validation-for="LastName"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input asp-for="Email" class="form-control" id="Email" placeholder=" ">
+          <span class="text-danger" asp-validation-for="Email"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="Phone">Phone</label>
+          <input asp-for="Phone" class="form-control" id="Phone" placeholder=" ">
+          <span class="text-danger" asp-validation-for="Phone"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="Address">Address</label>
+          <input asp-for="Address" class="form-control" id="Address" placeholder=" ">
+          <span class="text-danger" asp-validation-for="Address"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="BirthDate">BirthDate</label>
+          <input asp-for="BirthDate" class="form-control" id="BirthDate" placeholder=" ">
+          <span class="text-danger" asp-validation-for="BirthDate"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="Photo">Photo</label>
+          <input asp-for="Photo" type="file" class="form-control" id="Photo" placeholder=" ">
+          <span class="text-danger" asp-validation-for="Photo"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="GroupId">Group</label>
+          <select asp-for="GroupId" class="form-control" asp-items="ViewBag.Groups"></select>
+          <span class="text-danger" asp-validation-for="GroupId"></span>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Update Student</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

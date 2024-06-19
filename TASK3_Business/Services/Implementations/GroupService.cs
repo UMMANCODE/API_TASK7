@@ -11,6 +11,9 @@ using TASK3_DataAccess;
 using TASK3_DataAccess.Repositories.Interfaces;
 using TASK3_Business.Profiles;
 using AutoMapper;
+using TASK3_Business.Dtos;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using System.Drawing;
 
 namespace TASK3_Business.Services.Implementations {
   public class GroupService : IGroupService {
@@ -33,14 +36,16 @@ namespace TASK3_Business.Services.Implementations {
 
       return entity.Id;
     }
-    public async Task<List<GroupGetAllDto>> GetAll(int pageNumber = 1, int pageSize = 1) {
+    public async Task<PaginatedList<GroupGetAllDto>> GetAll(int pageNumber = 1, int pageSize = 1) {
       if (pageNumber <= 0 || pageSize <= 0) {
         throw new RestException(StatusCodes.Status400BadRequest, "Invalid parameters for paging");
       }
 
       var groups = await _groupRepository.GetAllAsync(x => !x.IsDeleted, pageNumber, pageSize);
-      return _mapper.Map<List<GroupGetAllDto>>(groups);
+      var paginated = PaginatedList<Group>.Create(groups, pageNumber, pageSize);
+      return new PaginatedList<GroupGetAllDto>(_mapper.Map<List<GroupGetAllDto>>(paginated.Items), paginated.TotalPages, pageNumber, pageSize);
     }
+
     public async Task<GroupGetOneDto> GetById(int id) {
       var group = await _groupRepository.GetAsync(x => x.Id == id && !x.IsDeleted);
 
@@ -76,6 +81,11 @@ namespace TASK3_Business.Services.Implementations {
       group.UpdatedAt = DateTime.Now;
 
       await _groupRepository.SaveAsync();
+    }
+
+    public async Task<List<GroupGetAllDto>> GetWhole() {
+      var groups = await _groupRepository.GetWholeAsync(x => !x.IsDeleted);
+      return _mapper.Map<List<GroupGetAllDto>>(groups);
     }
   }
 }

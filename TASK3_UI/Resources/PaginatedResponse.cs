@@ -1,5 +1,5 @@
-﻿namespace UniversityApp.UI.Resources {
-  public class PaginatedResponseResource<T> {
+﻿namespace TASK3_UI.Resources {
+  public class PaginatedResponse<T> {
     public List<T> Items { get; set; }
     public int PageIndex { get; set; }
     public int PageSize { get; set; }

@@ -102,3 +102,4 @@ C:\Users\User N\Desktop\API_TASK7\TASK3_DataAccess\obj\Debug\net8.0\refint\TASK3
 C:\Users\User N\Desktop\API_TASK7\TASK3_DataAccess\obj\Debug\net8.0\TASK3_DataAccess.pdb
 C:\Users\User N\Desktop\API_TASK7\TASK3_DataAccess\obj\Debug\net8.0\TASK3_DataAccess.genruntimeconfig.cache
 C:\Users\User N\Desktop\API_TASK7\TASK3_DataAccess\obj\Debug\net8.0\ref\TASK3_DataAccess.dll
+C:\Users\user\Desktop\Code Academy\API\TASK7\TASK3_DataAccess\obj\Debug\net8.0\TASK3_DataAccess.sourcelink.json

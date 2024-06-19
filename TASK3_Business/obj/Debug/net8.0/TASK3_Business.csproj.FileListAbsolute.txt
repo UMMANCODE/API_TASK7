@@ -102,3 +102,4 @@ C:\Users\User N\Desktop\API_TASK7\TASK3_Business\obj\Debug\net8.0\TASK3_Business
 C:\Users\User N\Desktop\API_TASK7\TASK3_Business\obj\Debug\net8.0\refint\TASK3_Business.dll
 C:\Users\User N\Desktop\API_TASK7\TASK3_Business\obj\Debug\net8.0\TASK3_Business.pdb
 C:\Users\User N\Desktop\API_TASK7\TASK3_Business\obj\Debug\net8.0\ref\TASK3_Business.dll
+C:\Users\user\Desktop\Code Academy\API\TASK7\TASK3_Business\obj\Debug\net8.0\TASK3_Business.sourcelink.json

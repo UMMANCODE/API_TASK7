@@ -40,11 +40,9 @@ namespace TASK3_DataAccess.Repositories.Implementations {
         query = query.Include(include);
       }
 
-      query = query.Where(predicate)
-        .Skip((pageNumber - 1) * pageSize)
-        .Take(pageSize);
+      query = query.Where(predicate);
 
-      return await Task.Run(() => query);
+      return await Task.FromResult(query);
     }
 
     public async Task<T> GetAsync(Expression<Func<T, bool>> predicate, params string[] includes) {
@@ -55,6 +53,18 @@ namespace TASK3_DataAccess.Repositories.Implementations {
       }
 
       return await query.FirstOrDefaultAsync(predicate) ?? new T();
+    }
+
+    public async Task<IQueryable<T>> GetWholeAsync(Expression<Func<T, bool>> predicate, params string[] includes) {
+      var query = _context.Set<T>().AsQueryable();
+
+      foreach (var include in includes) {
+        query = query.Include(include);
+      }
+
+      query = query.Where(predicate);
+
+      return await Task.FromResult(query);
     }
 
     public async Task SaveAsync() {
