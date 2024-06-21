@@ -1,10 +1,15 @@
 using TASK3_UI.Filters;
+using TASK3_UI.Services.Implementations;
+using TASK3_UI.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
+
 builder.Services.AddScoped<AuthFilter>();
+builder.Services.AddScoped<ICrudService, CrudService>();
 
 var app = builder.Build();
 

@@ -1,58 +1,60 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
-using System.Text;
 using System.Text.Json;
+using TASK3_UI;
 using TASK3_UI.Filters;
 using TASK3_UI.Resources;
+using TASK3_UI.Services.Interfaces;
 
 namespace UniversityApp.UI.Controllers {
   [ServiceFilter(typeof(AuthFilter))]
   public class GroupController : Controller {
-    private readonly HttpClient _client;
-    public GroupController() {
-      _client = new HttpClient();
+    private readonly ICrudService _crudService;
+    private const string BaseUrl = "https://localhost:7040/api/Groups";
+
+    public GroupController(ICrudService crudService) {
+      _crudService = crudService;
     }
 
     public async Task<IActionResult> Index(int page = 1) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-      using var response = await _client.GetAsync("https://localhost:7040/api/Groups?pageNumber=" + page + "&pageSize=2");
-      if (response.IsSuccessStatusCode) {
-        var bodyStr = await response.Content.ReadAsStringAsync();
-        var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-        var data = JsonSerializer.Deserialize<PaginatedResponse<GroupListItemGetResponse>>(bodyStr, options);
-        if (data.TotalPages < page) return RedirectToAction("index", new { page = data.TotalPages });
+      try {
+        var data = await _crudService.GetAllPaginatedAsync<GroupListItemGetResponse>(page, BaseUrl, new Dictionary<string, string> { { "pageSize", "2" } });
+        if (data.TotalPages < page) return RedirectToAction("Index", new { page = data.TotalPages });
 
         return View(data);
       }
-      else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-        return RedirectToAction("login", "account");
+      catch (HttpResponseException ex) {
+        if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
+          return RedirectToAction("Login", "Account");
+        }
+        else {
+          return RedirectToAction("Error", "Home");
+        }
       }
-      else {
-        return RedirectToAction("error", "home");
+      catch {
+        return RedirectToAction("Error", "Home");
       }
     }
 
-    public ActionResult Create() {
+    public IActionResult Create() {
       return View();
     }
 
     [HttpPost]
     public async Task<IActionResult> Create(GroupCreateRequest createRequest) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
       if (!ModelState.IsValid) return View();
 
-      var content = new StringContent(JsonSerializer.Serialize(createRequest), Encoding.UTF8, "application/json");
-      using (HttpResponseMessage response = await _client.PostAsync("https://localhost:7040/api/Groups", content)) {
-        if (response.IsSuccessStatusCode) {
-          return RedirectToAction("index");
+      try {
+        await _crudService.CreateAsync(createRequest, BaseUrl);
+        return RedirectToAction("Index");
+      }
+      catch (HttpResponseException ex) {
+        if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
+          return RedirectToAction("Login", "Account");
         }
-        else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-          return RedirectToAction("login", "account");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
-          var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-          var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await response.Content.ReadAsStringAsync(), options);
+        else if (ex.Response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
+          var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+          var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await ex.Response.Content.ReadAsStringAsync(), options);
 
           foreach (var item in errorResponse.Errors)
             ModelState.AddModelError(item.Key, item.Message);
@@ -61,77 +63,74 @@ namespace UniversityApp.UI.Controllers {
         }
         else {
           TempData["Error"] = "Something went wrong!";
+          return View(createRequest);
         }
       }
-      return View(createRequest);
     }
 
     public async Task<IActionResult> Edit(int id) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
-      using (var response = await _client.GetAsync("https://localhost:7040/api/Groups/" + id)) {
-        if (response.IsSuccessStatusCode) {
-          var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-          var request = JsonSerializer.Deserialize<GroupCreateRequest>(await response.Content.ReadAsStringAsync(), options);
-          return View(request);
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-          return RedirectToAction("login", "account");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
-          TempData["Error"] = "Group not found";
-        else
-          TempData["Error"] = "Something went wrong!";
+      try {
+        var request = await _crudService.GetAsync<GroupCreateRequest>($"{BaseUrl}/{id}");
+        return View(request);
       }
-      return RedirectToAction("index");
+      catch (HttpResponseException ex) {
+        if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
+          return RedirectToAction("Login", "Account");
+        }
+        else if (ex.Response.StatusCode == System.Net.HttpStatusCode.NotFound) {
+          TempData["Error"] = "Group not found";
+          return RedirectToAction("Index");
+        }
+        else {
+          TempData["Error"] = "Something went wrong!";
+          return RedirectToAction("Index");
+        }
+      }
     }
 
     [HttpPost]
     public async Task<IActionResult> Edit(GroupCreateRequest editRequest, int id) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
+      if (!ModelState.IsValid) return View(editRequest);
 
-      if (!ModelState.IsValid) return View();
-
-      var content = new StringContent(JsonSerializer.Serialize(editRequest), Encoding.UTF8, "application/json");
-      using var response = await _client.PutAsync("https://localhost:7040/api/Groups/" + id, content);
-      if (response.IsSuccessStatusCode) {
-        return RedirectToAction("index");
+      try {
+        await _crudService.UpdateAsync(editRequest, $"{BaseUrl}/{id}");
+        return RedirectToAction("Index");
       }
-      else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-        return RedirectToAction("login", "account");
+      catch (HttpResponseException ex) {
+        if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
+          return RedirectToAction("Login", "Account");
+        }
+        else if (ex.Response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
+          var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+          var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await ex.Response.Content.ReadAsStringAsync(), options);
+
+          foreach (var item in errorResponse.Errors)
+            ModelState.AddModelError(item.Key, item.Message);
+
+          return View(editRequest);
+        }
+        else {
+          TempData["Error"] = "Something went wrong!";
+          return View(editRequest);
+        }
       }
-      else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
-        var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-        var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await response.Content.ReadAsStringAsync(), options);
-
-        foreach (var item in errorResponse.Errors)
-          ModelState.AddModelError(item.Key, item.Message);
-
-        return View();
-      }
-      else {
-        TempData["Error"] = "Something went wrong!";
-      }
-
-
-      return View(editRequest);
     }
 
     public async Task<IActionResult> Delete(int id) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
-      using var response = await _client.DeleteAsync("https://localhost:7040/api/Groups/" + id);
-      if (response.IsSuccessStatusCode) {
+      try {
+        await _crudService.DeleteAsync($"{BaseUrl}/{id}");
         return Ok();
       }
-      else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-        return Unauthorized();
-      }
-      else if (response.StatusCode == System.Net.HttpStatusCode.NotFound) {
-        return NotFound();
-      }
-      else {
-        return StatusCode(500);
+      catch (HttpResponseException ex) {
+        if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
+          return Unauthorized();
+        }
+        else if (ex.Response.StatusCode == System.Net.HttpStatusCode.NotFound) {
+          return NotFound();
+        }
+        else {
+          return StatusCode(500);
+        }
       }
     }
   }
