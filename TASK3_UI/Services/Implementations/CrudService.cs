@@ -70,5 +70,22 @@ namespace TASK3_UI.Services.Implementations {
         throw new HttpResponseException(response);
       }
     }
+
+    public async Task UpdateSpecialAsync(HttpContent content, string url) {
+      AddAuthorizationHeader();
+      var response = await _client.PutAsync(url, content);
+      if (!response.IsSuccessStatusCode) {
+        throw new HttpResponseException(response);
+      }
+    }
+
+    public async Task CreateSpecialAsync(HttpContent content, string url) {
+      AddAuthorizationHeader();
+      var response = await _client.PostAsync(url, content);
+      if (!response.IsSuccessStatusCode) {
+        throw new HttpResponseException(response);
+      }
+    }
+
   }
 }

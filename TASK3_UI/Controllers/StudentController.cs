@@ -1,200 +1,97 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Net.Http.Headers;
-using System.Text.Json;
-using System.Text;
-using TASK3_UI.Filters;
-using TASK3_UI.Resources;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Net.Http.Headers;
+using System.Text.Json;
+using TASK3_UI.Filters;
+using TASK3_UI.Resources;
+using TASK3_UI.Services.Interfaces;
 
 namespace TASK3_UI.Controllers {
   [ServiceFilter(typeof(AuthFilter))]
   public class StudentController : Controller {
-    private readonly HttpClient _client;
-    public StudentController() {
-      _client = new HttpClient();
+    private readonly ICrudService _crudService;
+    private const string BaseUrl = "https://localhost:7040/api/Students";
+    private const string GroupBaseUrl = "https://localhost:7040/api/Groups/whole";
+
+    public StudentController(ICrudService crudService) {
+      _crudService = crudService;
     }
+
     public async Task<IActionResult> Index(int page = 1) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-      using var response = await _client.GetAsync("https://localhost:7040/api/Students?pageNumber=" + page + "&pageSize=4");
+      var data = await _crudService.GetAllPaginatedAsync<StudentListItemGetResponse>(
+          page,
+          BaseUrl,
+          new Dictionary<string, string> { { "pageSize", "4" } }
+      );
+      if (data.TotalPages < page)
+        return RedirectToAction("Index", new { page = data.TotalPages });
 
-      if (response.IsSuccessStatusCode) {
-        var bodyStr = await response.Content.ReadAsStringAsync();
-        var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-        var data = JsonSerializer.Deserialize<PaginatedResponse<StudentListItemGetResponse>>(bodyStr, options);
-        if (data.TotalPages < page) return RedirectToAction("index", new { page = data.TotalPages });
-
-        return View(data);
-      }
-      else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-        return RedirectToAction("login", "account");
-      }
-      else {
-        return RedirectToAction("error", "home");
-      }
+      return View(data);
     }
 
     public async Task<IActionResult> Create() {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
-      var groups = new List<StudentCreateWithGroupRequest>();
-      var response = await _client.GetAsync("https://localhost:7040/api/Groups/whole");
-
-      if (response.IsSuccessStatusCode) {
-        groups = await response.Content.ReadFromJsonAsync<List<StudentCreateWithGroupRequest>>();
-      }
-      else {
-        TempData["Error"] = "Could not load groups.";
-      }
-
-      ViewBag.Groups = new SelectList(groups, "Id", "Name");
+      await PopulateGroupsAsync();
       return View();
     }
 
     [HttpPost]
     public async Task<IActionResult> Create([FromForm] StudentCreateRequest createRequest) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
       if (!ModelState.IsValid) {
         await PopulateGroupsAsync();
         return View(createRequest);
       }
 
-      try {
-        using var content = new MultipartFormDataContent {
-          { new StringContent(createRequest.FirstName), "FirstName" },
-          { new StringContent(createRequest.LastName), "LastName" },
-          { new StringContent(createRequest.Email), "Email" },
-          { new StringContent(createRequest.Phone), "Phone" },
-          { new StringContent(createRequest.Address), "Address" },
-          { new StringContent(createRequest.BirthDate.ToString()), "BirthDate" },
-          { new StreamContent(createRequest.Photo.OpenReadStream()), "Photo", createRequest.Photo.FileName },
-          { new StringContent(createRequest.GroupId.ToString()), "GroupId" }
-        };
-
-        using HttpResponseMessage response = await _client.PostAsync("https://localhost:7040/api/Students/", content);
-        if (response.IsSuccessStatusCode) {
-          return RedirectToAction("Index");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-          return RedirectToAction("Login", "Account");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
-          var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-          var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await response.Content.ReadAsStringAsync(), options);
-
-          foreach (var item in errorResponse.Errors)
-            ModelState.AddModelError(item.Key, item.Message);
-
-          await PopulateGroupsAsync();
-          return View(createRequest);
-        }
-        else {
-          TempData["Error"] = "Something went wrong";
-          await PopulateGroupsAsync();
-          return View(createRequest);
-        }
-      }
-      catch (Exception ex) {
-        TempData["Error"] = $"Exception: {ex.Message}";
-        await PopulateGroupsAsync();
-        return View(createRequest);
-      }
-    }
-
-    private async Task PopulateGroupsAsync() {
-      var response = await _client.GetAsync("https://localhost:7040/api/Groups/whole");
-      if (response.IsSuccessStatusCode) {
-        var groups = await response.Content.ReadFromJsonAsync<List<StudentCreateWithGroupRequest>>();
-        ViewBag.Groups = new SelectList(groups, "Id", "Name");
-      }
-      else {
-        ViewBag.Groups = new SelectList(new List<StudentCreateWithGroupRequest>(), "Id", "Name");
-      }
+      var content = CreateMultipartContent(createRequest);
+      await _crudService.CreateSpecialAsync(content, $"{BaseUrl}/");
+      return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> Edit(int id) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
-      var response = await _client.GetAsync($"https://localhost:7040/api/Students/{id}");
-      if (response.IsSuccessStatusCode) {
-        var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-        var student = JsonSerializer.Deserialize<StudentCreateRequest>(await response.Content.ReadAsStringAsync(), options);
-        await PopulateGroupsAsync();
-        return View(student);
-      }
-      return RedirectToAction("Error", "Home");
+      var student = await _crudService.GetAsync<StudentCreateRequest>($"{BaseUrl}/{id}");
+      await PopulateGroupsAsync();
+      return View(student);
     }
 
     [HttpPost]
     public async Task<IActionResult> Edit(int id, [FromForm] StudentCreateRequest editRequest) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-
       if (!ModelState.IsValid) {
         await PopulateGroupsAsync();
         return View(editRequest);
       }
-      try {
-        using var content = new MultipartFormDataContent {
-          { new StringContent(editRequest.FirstName), "FirstName" },
-          { new StringContent(editRequest.LastName), "LastName" },
-          { new StringContent(editRequest.Email), "Email" },
-          { new StringContent(editRequest.Phone), "Phone" },
-          { new StringContent(editRequest.Address), "Address" },
-          { new StringContent(editRequest.BirthDate.ToString()), "BirthDate" },
-          { new StreamContent(editRequest.Photo.OpenReadStream()), "Photo", editRequest.Photo.FileName },
-          { new StringContent(editRequest.GroupId.ToString()), "GroupId" }
-        };
 
-        using HttpResponseMessage response = await _client.PutAsync($"https://localhost:7040/api/Students/{id}", content);
-        if (response.IsSuccessStatusCode) {
-          return RedirectToAction("Index");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-          return RedirectToAction("Login", "Account");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.BadRequest) {
-          var options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-          var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(await response.Content.ReadAsStringAsync(), options);
-
-          foreach (var item in errorResponse.Errors)
-            ModelState.AddModelError(item.Key, item.Message);
-
-          await PopulateGroupsAsync();
-          return View(editRequest);
-        }
-        else {
-          TempData["Error"] = "Something went wrong";
-          await PopulateGroupsAsync();
-          return View(editRequest);
-        }
-      }
-      catch (Exception ex) {
-        TempData["Error"] = $"Exception: {ex.Message}";
-        await PopulateGroupsAsync();
-        return View(editRequest);
-      }
+      var content = CreateMultipartContent(editRequest);
+      await _crudService.UpdateSpecialAsync(content, $"{BaseUrl}/{id}");
+      return RedirectToAction("Index");
     }
 
+    [HttpPost]
     public async Task<IActionResult> Delete(int id) {
-      _client.DefaultRequestHeaders.Add(HeaderNames.Authorization, Request.Cookies["token"]);
-      try {
-        var response = await _client.DeleteAsync($"https://localhost:7040/api/Students/{id}");
-        if (response.IsSuccessStatusCode) {
-          return RedirectToAction("Index");
-        }
-        else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized) {
-          return RedirectToAction("Login", "Account");
-        }
-        else {
-          TempData["Error"] = "Something went wrong";
-          return RedirectToAction("Index");
-        }
+      await _crudService.DeleteAsync($"{BaseUrl}/{id}");
+      return RedirectToAction("Index");
+    }
+
+    private async Task PopulateGroupsAsync() {
+      var groups = await _crudService.GetAsync<List<StudentCreateWithGroupRequest>>(GroupBaseUrl);
+      ViewBag.Groups = new SelectList(groups, "Id", "Name");
+    }
+
+    private MultipartFormDataContent CreateMultipartContent(StudentCreateRequest request) {
+      var content = new MultipartFormDataContent
+      {
+                { new StringContent(request.FirstName ?? string.Empty), "FirstName" },
+                { new StringContent(request.LastName ?? string.Empty), "LastName" },
+                { new StringContent(request.Email ?? string.Empty), "Email" },
+                { new StringContent(request.Phone ?? string.Empty), "Phone" },
+                { new StringContent(request.Address ?? string.Empty), "Address" },
+                { new StringContent(request.BirthDate?.ToString("o") ?? string.Empty), "BirthDate" },
+                { new StringContent(request.GroupId.ToString()), "GroupId" }
+      };
+
+      if (request.Photo != null) {
+        content.Add(new StreamContent(request.Photo.OpenReadStream()), "Photo", request.Photo.FileName);
       }
-      catch (Exception ex) {
-        TempData["Error"] = $"Exception: {ex.Message}";
-        return RedirectToAction("Index");
-      }
+
+      return content;
     }
   }
 }

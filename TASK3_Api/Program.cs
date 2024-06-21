@@ -32,7 +32,7 @@ builder.Services.AddControllers().ConfigureApiBehaviorOptions(options => {
 });
 
 builder.Services.AddDbContext<AppDbContext>(option => {
-  option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+  option.UseSqlServer(builder.Configuration.GetConnectionString("DGKConnection"));
 });
 
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt => {

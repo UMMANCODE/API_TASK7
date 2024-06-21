@@ -8,7 +8,7 @@ namespace TASK3_UI.Filters {
       if (context.HttpContext.Request.Cookies["token"] == null) {
         context.Result = controller.RedirectToAction(
           actionName: "Login",
-          controllerName: "Auth",
+          controllerName: "Account",
           new { returnUrl = context.HttpContext.Request.Path }
         );
       }

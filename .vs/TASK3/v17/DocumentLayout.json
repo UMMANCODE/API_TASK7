@@ -3,56 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\User N\\Desktop\\API_TASK7\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_business\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|solutionrelative:task3_business\\services\\implementations\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_business\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|solutionrelative:task3_business\\services\\implementations\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_business\\services\\implementations\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|solutionrelative:task3_business\\services\\implementations\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5A0ECB33-4EA4-44F5-92FB-F0C1316AADE6}|TASK3_Api\\TASK3_Api.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A0ECB33-4EA4-44F5-92FB-F0C1316AADE6}|TASK3_Api\\TASK3_Api.csproj|solutionrelative:task3_api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_business\\helpers\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{604FE84E-F732-44EE-8C76-1F52BE3B72EF}|TASK3_Business\\TASK3_Business.csproj|solutionrelative:task3_business\\helpers\\filemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_core\\entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|solutionrelative:task3_core\\entities\\group.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_core\\entities\\auditentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|solutionrelative:task3_core\\entities\\auditentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_core\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEB02019-42E4-4CFD-8B3D-6925871CDAC5}|TASK3_Core\\TASK3_Core.csproj|solutionrelative:task3_core\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_dataaccess\\migrations\\20240608211625_somechanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|solutionrelative:task3_dataaccess\\migrations\\20240608211625_somechanges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_dataaccess\\migrations\\20240607140555_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|solutionrelative:task3_dataaccess\\migrations\\20240607140555_update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D68D5AC9-872E-4464-BA97-5DEF027B1920}|TASK3_DataAccess\\TASK3_DataAccess.csproj|solutionrelative:task3_dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5A0ECB33-4EA4-44F5-92FB-F0C1316AADE6}|TASK3_Api\\TASK3_Api.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_api\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5A0ECB33-4EA4-44F5-92FB-F0C1316AADE6}|TASK3_Api\\TASK3_Api.csproj|solutionrelative:task3_api\\controllers\\groupscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\filters\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\filters\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\resources\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\resources\\errorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\services\\implementations\\crudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\services\\implementations\\crudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|c:\\users\\user n\\desktop\\api_task7\\task3_ui\\services\\interfaces\\icrudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54E8D990-4808-46A9-A10C-A7CDBD82C69C}|TASK3_UI\\TASK3_UI.csproj|solutionrelative:task3_ui\\services\\interfaces\\icrudservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,97 +42,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "TASK3_Api\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "TASK3_Api\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAqwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:58:18.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FileManager.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Helpers\\FileManager.cs",
-              "RelativeDocumentMoniker": "TASK3_Business\\Helpers\\FileManager.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Helpers\\FileManager.cs",
-              "RelativeToolTip": "TASK3_Business\\Helpers\\FileManager.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAqwAwAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:58:04.972Z",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TASK3_UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TASK3_UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAFEAAAAAAAAAAAAAAEcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-21T08:25:24.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\StudentService.cs",
-              "RelativeDocumentMoniker": "TASK3_Business\\Services\\Implementations\\StudentService.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\StudentService.cs",
-              "RelativeToolTip": "TASK3_Business\\Services\\Implementations\\StudentService.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAqwCEAAAAdAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Program.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Program.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Program.cs",
+              "RelativeToolTip": "TASK3_UI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:56:58.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GroupService.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\GroupService.cs",
-              "RelativeDocumentMoniker": "TASK3_Business\\Services\\Implementations\\GroupService.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\GroupService.cs",
-              "RelativeToolTip": "TASK3_Business\\Services\\Implementations\\GroupService.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAqwDoAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:50.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\AuthService.cs",
-              "RelativeDocumentMoniker": "TASK3_Business\\Services\\Implementations\\AuthService.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Business\\Services\\Implementations\\AuthService.cs",
-              "RelativeToolTip": "TASK3_Business\\Services\\Implementations\\AuthService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAqwDEAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:26.042Z",
+              "WhenOpened": "2024-06-21T08:17:59.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Group.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\Group.cs",
-              "RelativeDocumentMoniker": "TASK3_Core\\Entities\\Group.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\Group.cs",
-              "RelativeToolTip": "TASK3_Core\\Entities\\Group.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ErrorResponse.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Resources\\ErrorResponse.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Resources\\ErrorResponse.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Resources\\ErrorResponse.cs",
+              "RelativeToolTip": "TASK3_UI\\Resources\\ErrorResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:19.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuditEntity.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\AuditEntity.cs",
-              "RelativeDocumentMoniker": "TASK3_Core\\Entities\\AuditEntity.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\AuditEntity.cs",
-              "RelativeToolTip": "TASK3_Core\\Entities\\AuditEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:14.109Z",
+              "WhenOpened": "2024-06-21T08:06:33.573Z",
               "EditorCaption": ""
             },
             {
@@ -161,80 +89,65 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Filters\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Filters\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Filters\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "TASK3_UI\\Filters\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T08:04:41.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrudService.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Services\\Implementations\\CrudService.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Services\\Implementations\\CrudService.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Services\\Implementations\\CrudService.cs",
+              "RelativeToolTip": "TASK3_UI\\Services\\Implementations\\CrudService.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAmwE4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:11:58.752Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\AppUser.cs",
-              "RelativeDocumentMoniker": "TASK3_Core\\Entities\\AppUser.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Core\\Entities\\AppUser.cs",
-              "RelativeToolTip": "TASK3_Core\\Entities\\AppUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ICrudService.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Services\\Interfaces\\ICrudService.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Services\\Interfaces\\ICrudService.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Services\\Interfaces\\ICrudService.cs",
+              "RelativeToolTip": "TASK3_UI\\Services\\Interfaces\\ICrudService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:14.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-21T07:11:25.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "20240608211625_somechanges.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\Migrations\\20240608211625_somechanges.cs",
-              "RelativeDocumentMoniker": "TASK3_DataAccess\\Migrations\\20240608211625_somechanges.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\Migrations\\20240608211625_somechanges.cs",
-              "RelativeToolTip": "TASK3_DataAccess\\Migrations\\20240608211625_somechanges.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:07.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20240607140555_Update.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\Migrations\\20240607140555_Update.cs",
-              "RelativeDocumentMoniker": "TASK3_DataAccess\\Migrations\\20240607140555_Update.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\Migrations\\20240607140555_Update.cs",
-              "RelativeToolTip": "TASK3_DataAccess\\Migrations\\20240607140555_Update.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:55:07.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "TASK3_DataAccess\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_DataAccess\\AppDbContext.cs",
-              "RelativeToolTip": "TASK3_DataAccess\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:54:59.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GroupsController.cs",
-              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\Controllers\\GroupsController.cs",
-              "RelativeDocumentMoniker": "TASK3_Api\\Controllers\\GroupsController.cs",
-              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_Api\\Controllers\\GroupsController.cs",
-              "RelativeToolTip": "TASK3_Api\\Controllers\\GroupsController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:48:19.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
               "Title": "GroupController.cs",
               "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Controllers\\GroupController.cs",
               "RelativeDocumentMoniker": "TASK3_UI\\Controllers\\GroupController.cs",
               "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Controllers\\GroupController.cs",
               "RelativeToolTip": "TASK3_UI\\Controllers\\GroupController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAqwB0AAAANAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T05:47:29.595Z",
+              "WhenOpened": "2024-06-21T07:01:42.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "TASK3_UI\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\User N\\Desktop\\API_TASK7\\TASK3_UI\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "TASK3_UI\\Controllers\\StudentController.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAmwFcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-21T07:02:24.913Z",
               "EditorCaption": ""
             }
           ]

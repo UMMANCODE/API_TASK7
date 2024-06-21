@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,16 +63,13 @@
         </a>
       </li>
 
-      <!-- Divider -->
-      <hr class="sidebar-divider">
-
       <li class="nav-item active">
         <a class="nav-link" asp-controller="student" asp-action="index">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Students</span>
         </a>
       </li>
-      @if (User.Identity.IsAuthenticated) {
+      @if (HttpContextAccessor.HttpContext.Request.Cookies["token"] != null) {
         <li class="nav-item active">
           <a class="nav-link" asp-controller="account" asp-action="logout">
             <i class="fas fa-fw fa-tachometer-alt"></i>

@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TASK3_UI
 build_property.RootNamespace = TASK3_UI
-build_property.ProjectDir = C:\Users\user\Desktop\Code Academy\API\TASK7\TASK3_UI\
+build_property.ProjectDir = C:\Users\User N\Desktop\API_TASK7\TASK3_UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\Code Academy\API\TASK7\TASK3_UI
+build_property.MSBuildProjectDirectory = C:\Users\User N\Desktop\API_TASK7\TASK3_UI
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Account/Login.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Group/Create.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Group/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Group/Edit.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Group/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Group/Index.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Group/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Home/Error.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Home/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Home/Index.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Student/Create.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Student/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Student/Edit.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Student/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Student/Index.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/_ViewImports.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/_ViewStart.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/Code Academy/API/TASK7/TASK3_UI/Views/Shared/_Layout.cshtml]
+[C:/Users/User N/Desktop/API_TASK7/TASK3_UI/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-u0gorjtao4
